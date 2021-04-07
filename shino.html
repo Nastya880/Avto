@@ -1,0 +1,65 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>Avto</title>
+      <link href="shino.css" rel="stylesheet" type="text/css" />
+      	<!--Добавим значки соц сетей для связи-->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+      	<!--Логотип-->
+      <link rel="icon" href="лого.jpg">
+      <script src="script.js"></script>
+  </head>
+ 
+ 
+  <body>
+
+
+<div class="progress"></div>
+
+<style>
+  @keyframes go-left-right {   /* назовём анимацию: "go-left-right" */
+    from {
+      left: 0px;               /* от: left: 0px */
+    }
+    to {
+      left: calc(100% - 50px); /* до: left: 100%-50px */
+    }
+  }
+
+
+  .progress {
+    /* применить анимацию go-left-right */
+    /* продолжительность 3s */
+    /* количество раз: бесконечное (infinite) */
+    /* менять направление анимации каждый раз (alternate) */
+    animation: go-left-right 3s infinite alternate;
+
+    position: relative;
+    border: 2px solid green;
+    width: 50px;
+    height: 20px;
+    background: lime;
+  }
+</style>
+
+
+    <div class="world">
+        <div class="highway"></div>
+        <div class="city"></div>
+
+        <div class="car">
+            <img src="субару.jpg" alt="">
+        </div>
+
+        <div class="wheel">
+            <img src="субарулоготип.jpg" alt="" class="back-wheel">
+            <img src="субарулоготип.jpg" alt="" class="front-wheel">
+        </div>
+
+    </div>
+ </body>
+</html>
+
+

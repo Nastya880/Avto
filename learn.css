@@ -1,0 +1,89 @@
+* {box-sizing: border-box;}
+body {
+  margin: 0 0 0 20px;
+  background: url(https://html5book.ru/wp-content/uploads/2015/01/blur.jpg);
+}
+.wrap {
+  width: 640px;
+  margin: 50px auto 0;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+} 
+.box {
+  width: 300px;
+  float: left;
+  margin-right: 20px;
+}
+.top {
+  background: #36454A;
+  padding: 20px;
+  text-align: center;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+p {
+  margin: 0px 0px 10px;
+}
+.title {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+.price {
+  font-size: 70px;
+  font-weight: bold;
+  color: #ffffff;
+  position: relative;
+  text-align: center;
+}
+sup {
+  font-size: 24px;
+  position: relative;
+  top: -15px;
+  color: #6eaca7;
+}
+span {
+    font-size: 16px;
+    color: #6eaca7;
+    text-transform: uppercase;
+}
+.button {
+  text-decoration: none;
+  color: #6eaca7;
+  font-size: 18px;
+  border: 1px solid #6eaca7;
+  display: inline-block;
+  padding: 6px 12px;
+  line-height: 1.5;
+  text-align: center;
+  border-radius: 4px;
+  transition: 0.4s linear;
+}
+.button:hover {
+  color: white;
+  border-color: white;
+}
+.bottom {
+  padding: 20px 20px 40px;
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+li {
+  border-bottom: 1px solid #e3e3e3;
+  color: #6eaca7;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+
+
+Resources

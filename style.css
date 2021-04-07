@@ -1,0 +1,354 @@
+
+/*Псевдокласс :root определяет корневой элемент документа. В HTML этот селектор всегда соответствует элементу <html>.*/
+/*https://html5book.ru/css3-filtry/*/
+*{
+	margin: 0;
+	padding: 0;
+  /*боковой сдвиг тоненько (без стрелок)*/
+	scroll-behavior: smooth;
+}
+
+main{
+  /*отступ до воображаемого прямоугольника с текстом*/
+	padding: 0;
+	width: 100%;
+	height: 100%;
+  background: #ffffff;
+}
+
+/*header*/
+
+header{
+  /*отступ от каждого края элемента*/
+	margin: 0 auto;
+	width: 100%;
+	height: 70px;
+  /*главное меню слева*/
+	display: flex;
+    align-items: center; 
+    /*yt меняет положение при прокрутке страницы*/
+    justify-content: space-around; 
+    background: transparent;
+	position: fixed;
+	top: 0;
+  background: rgba(136, 158, 168, 0.562);
+   /*скорость появления блока в верхнем меню*/
+	transition: 8s;
+  /*уровень слоя*/
+	z-index: 4;
+}
+
+
+/*цвет блока верхнего меню*/
+/**/
+header:hover{
+  /*прозрачность*/
+	opacity:80;
+	background: #78777c91;
+}
+
+.logo img{
+  /*расстояние сверху*/
+	padding-top: 5px;
+	height: 50px;
+	cursor: pointer;
+}
+
+/*линия с меню*/
+.nav-bar{
+  /*не нужно точки*/
+	list-style:none;
+	position: relative;
+	display: flex;
+}
+
+.nav-show{
+	opacity: 0;
+}
+
+
+a.nav-link{
+	margin: 2px;
+	padding: 5px 10px;
+	text-decoration: none;
+  /*цвет верхнего меню*/
+	color: rgba(19, 19, 48, 0.541);
+	font-family: 'Times New Roman', Times, serif;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+.active{
+	background: antiquewhite;
+}
+
+/*низ*/
+.nav-link:hover {
+	color: #333238;
+}
+
+/*Идентификатор - уникальное имя*/
+#home{ 	
+	margin: auto;
+	height: 100vh;
+	color: antiquewhite;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+
+#home .filter{
+  background-image: url('эвакуатор.jpg');	
+  /*масштабируем и сохраняем пропорции*/
+	background-size: cover;
+	background-position:center;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	opacity:.20;
+}  
+
+/*текст home*/
+.intro {
+	text-align:center;
+    color: rgba(19, 19, 48, 0.541);
+	z-index: 1;
+	margin: auto;
+	padding: 20px;
+}
+
+.intro  p{
+    margin: 5px;
+    /*размер текста home*/
+	font-size:18pt;
+	text-align:center;
+}
+
+ h3{
+	padding-bottom: 15px;
+    letter-spacing: normal;
+    font-family: 'Times New Roman', Times, serif;
+	font-style: normal;
+	font-size: 60px;
+	color: rgba(235, 11, 11, 0.959);
+  /*тень к тексту*/
+	text-shadow: 0px 0px 40px burlywood;
+}
+
+
+/*social media*/
+
+.social-media{
+	padding: 10px;
+	display: flex;
+	position: center;
+    align-items: space-around;
+    /*реакция браузера на расположение элементов*/
+	justify-content:center;
+}
+
+.social-media a {
+    margin: 10px;
+    font-size: 2rem;
+    text-align:center;
+    display: inline-block;
+	color: rgba(0, 0, 0, 0.479);
+}
+
+.social-media a i{
+	cursor: pointer;
+}
+
+/*соц сети при наведении*/
+.social-media  a:hover {
+	color:rgba(245, 159, 0, 0.438);
+	text-shadow: 0 0 50px rgba(13, 13, 14, 0.438);
+}
+
+/* projects */
+
+/*подтекст к услугам*/
+#projects{
+	margin-top:100px;
+    height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+	text-align:center;
+	color: rgba(19, 19, 48, 0.541);
+}
+
+
+#projects h3{
+    padding-top: 70px;
+}
+/*подтекст к услугам*/
+#projects p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:1pc;
+	padding: 10px;
+}
+
+.work{
+	display: flex; 
+	flex: 1;
+    flex-wrap: wrap;
+    justify-content:center;
+	align-items: center;
+	padding: 20px;
+}
+
+/*услуги по распределениям в блоках*/
+.card{
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	width: 200px;
+	height:250px;
+	border-radius:12px;
+  /*карточки внутри*/
+    background: antiquewhite;
+}
+
+.card img{
+	width: 100%;
+	height:70%;
+	border-radius:10px 10px 0px 0px;
+}
+
+.card .work-content{
+	text-align: center;
+	padding: 10px 5px;
+	font-size: small;
+  /*цвет текста в карточках*/
+	color: rgba(19, 19, 48, 0.541);
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	cursor: pointer;
+}
+
+.card a{
+	text-decoration: none;
+}
+
+.card .work-content:hover{
+    color:#202020;
+}
+
+.card:hover{
+	box-shadow: 0 0 1.5rem gray;
+}
+
+/*подтекст к контактам*/
+#contact{
+	margin: auto;
+	padding-bottom: 20px;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: rgba(19, 19, 48, 0.541);
+}
+	
+#contact p{
+	padding:10px;
+	text-align:center;
+	font-size:1pc;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer {
+	width: 100%;
+	height: 100%;
+    background-color: #202020;
+}
+
+.copyright {
+	color: #fff;
+	font-size: 1.2rem;
+	line-height: 40px;
+	text-align: center;
+}
+
+.copyright a{
+	color: #fff;
+	font-size: 1rem;
+	letter-spacing: 1px;
+    text-decoration: none;
+}
+
+/*линия подчеркивания контактов и заголовка*/
+
+hr {
+    background: rgb(167, 167, 167);
+	margin: 2px;
+	height: 3px;
+	width: 150px;
+    border-radius:5px;
+	border: hidden;
+	margin-inline-start: auto;
+    margin-inline-end: auto;
+}
+
+/*Scrollbar*/
+::-webkit-Scrollbar{
+    width: 5px; 
+	background: rgba(5,5,5,1);
+}
+::-webkit-Scrollbar-thumb{
+	border-radius: 10px;
+	background: cadetblue;
+	box-shadow: inset 0 0 20px antiquewhite;
+}
+::-webkit-Scrollbar-track{
+	margin-top: 80px;
+	border-radius: 10px;
+}
+
+
+
+ @keyframes go-left-right {   /* назовём анимацию: "go-left-right" */
+    from {
+      left: 0px;               /* от: left: 0px */
+    }
+    to {
+      left: calc(100% - 50px); /* до: left: 100%-50px */
+    }
+  }
+
+
+  .progress {
+    /* применить анимацию go-left-right */
+    /* продолжительность 3s */
+    /* количество раз: бесконечное (infinite) */
+    /* менять направление анимации каждый раз (alternate) */
+    animation: go-left-right 3s infinite alternate;
+
+    position: relative;
+    border: 2px solid green;
+    width: 50px;
+    height: 20px;
+    /*background: lime;*/
+  }
+
+
+
+
+form {
+  position: relative;
+  width: 300px;
+  margin: auto;
+}
+/*поиск (снизу искать здесь)*/
+.d7 button:before{
+  content: "\f002";
+  font-family: FontAwesome;
+  color: #324b4e;
+}
+
+
